@@ -1,10 +1,8 @@
 <?php
 header("Content-type: application/json;charset=utf-8");
-
-
+require_once $_SERVER["DOCUMENT_ROOT"] . "/irestaurant/server/lib/config.php";
 if(isset($_POST['d']) && isset($_POST['lang']))
 {
-require_once $_SERVER["DOCUMENT_ROOT"] . "/irestaurant/server/lib/config.php";
 $inputdate = $_POST['d'];
 $inputhour = $_POST['h'];
 

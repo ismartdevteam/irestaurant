@@ -1,5 +1,4 @@
 'use strict';
-
 app.factory('sessionService', ['$http', function($http){
 	return{
 		set:function(key,value){
@@ -9,7 +8,7 @@ app.factory('sessionService', ['$http', function($http){
 			return sessionStorage.getItem(key);
 		},
 		destroy:function(key){
-			$http.post('../destroy_session.php');
+			$http.post('./server/admin/destroy_session.php');
 			return sessionStorage.removeItem(key);
 		}
 	};

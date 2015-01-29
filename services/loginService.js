@@ -2,34 +2,28 @@
 app.factory('loginService',function($http, $location, sessionService){
 	return{
 		login:function(data,scope){
-			$http.post('../user.php',data).success(function(data){
-          
-     				console.log(data);
-				if(data!=0){
-					//scope.msgtxt='Correct information';
-					sessionService.set('uid',data);
+			$http.post('./server/admin/user.php',data).success(function(data){
+				console.log(data);
+				if(data.response_number==1){
+					sessionService.set('uid',data.uid);
 					$location.path('/home');
 				}	       
 				else  {
-					scope.msgtxt='Нэвтрэх нэр эсхүл Нууц үг буруу байна';
+					scope.msgtxt='Invalid username and password';
 					$location.path('/login');
 				}				   
-        }).error(function(data) {
-            console.log(data);
-            });
+			}).error(function(data) {
+				console.log(data);
+			});
 		},
 		logout:function(){
 			sessionService.destroy('uid');
+			console.log('sds');
 			$location.path('/login');
 		},
 		islogged:function(){
-			var $checkSessionServer=$http.post('../check_session.php');
-
+			var $checkSessionServer=$http.post('./server/admin/check_session.php');
 			return $checkSessionServer;
-			/*
-			if(sessionService.get('user')) return true;
-			else return false;
-			*/
 		}
 	}
 
