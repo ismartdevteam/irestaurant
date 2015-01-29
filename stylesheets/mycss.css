@@ -2,53 +2,36 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   min-width: 450px;
-  min-height: 600px;
+  background: none;
 }
 @media(max-width: 1920px) {
-  .mainBack_box{
-    top:75px;
-    left: 150px;
-    right: 150px;
-  }
-  .mainBack_black_box{
-    top:75px;
-    left: 150px;
-    right: 150px;
-  }
-  .textDesc {
-    font-size: 1.1em;
-    padding: 60px;
-  }
-  .textDescOne{
-    font-size: 1.1em;
-    padding: 10px 60px 25px 60px;
-  }
-  .textOver{
-    font-size: 1.1em;
-    padding: 10px 25px 10px 25px;
-  }
+
 }
 @media(max-width: 990px) {
-  .hideImg{
-    display: none;
-  }
-  .mainBack_box{
-    left: 10px;
-    top: 60px;
-    right: 10px;
-  }
-  .textDesc {
-    font-size: 0.5em;
-    padding: 5px;
-  }
-  .textDescOne {
-    font-size: 0.5em;
-    padding: 5px;
-  }
-  .textOver{
-    font-size: 0.5em;
-    padding: 5px;
-  }
 
+}
+.login{
 
+  background: url("../images/main/login_back.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+.login h3{
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+}
+.login form{
+  width: 400px;
+  padding-top:90px;
+  max-width: 450px;
+}
+.login p{
+  color: #fff;
+  padding-top: 10px;
 }

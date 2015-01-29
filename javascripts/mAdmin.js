@@ -35,6 +35,7 @@ app.run(function($rootScope, $location, loginService){
 });
 app.controller('loginCtrl', ['$scope','loginService', function ($scope,loginService) {
   $scope.msgtxt='';
+  loginService.logout();
   $scope.login=function(data){
     loginService.login(data,$scope); 
   };
