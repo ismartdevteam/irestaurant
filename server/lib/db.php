@@ -6,8 +6,8 @@ class Database {
     public static function getInstance(){
         if(!isset(self::$instance)){
             $host="localhost";
-            $user="root";
-            $password="";
+            $user="ismart";
+            $password="wv%iF=1[,ygi";
             $database="ismart_irestaurant";
             self::$instance=  mysqli_connect($host, $user, $password, $database);
             self::$instance->set_charset('utf8');

@@ -18,7 +18,6 @@ app.factory('loginService',function($http, $location, sessionService){
 		},
 		logout:function(){
 			sessionService.destroy('uid');
-			console.log('sds');
 			$location.path('/login');
 		},
 		islogged:function(){
